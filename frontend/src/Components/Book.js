@@ -93,12 +93,12 @@ function Book({ cab, handleclick }) {
       (pick === "borivali" && drop === "jogeshwari") ||
       (pick === "jogeshwari" && drop === "borivali")
     ) {
-      setKm(10.4 + 1.4);
+      setKm(11.8);
     } else if (
       (pick === "borivali" && drop === "andheri") ||
       (pick === "andheri" && drop === "borivali")
     ) {
-      setKm(11.8 + 6.7);
+      setKm(18.5);
     } else if (
       (pick === "kandivali" && drop === "malad") ||
       (pick === "malad" && drop === "kandivali")
@@ -108,17 +108,17 @@ function Book({ cab, handleclick }) {
       (pick === "kandivali" && drop === "goregoan") ||
       (pick === "goregoan" && drop === "kandivali")
     ) {
-      setKm(3.6 + 2.3);
+      setKm(5.9);
     } else if (
       (pick === "kandivali" && drop === "rammandir") ||
       (pick === "rammandir" && drop === "kandivali")
     ) {
-      setKm(5.9 + 1.1);
+      setKm(7);
     } else if (
       (pick === "kandivali" && drop === "jogeshwari") ||
       (pick === "jogeshwari" && drop === "kandivali")
     ) {
-      setKm(7 + 1.4);
+      setKm(8.4);
     } else if (
       (pick === "kandivali" && drop === "andheri") ||
       (pick === "andheri" && drop === "kandivali")
@@ -133,17 +133,17 @@ function Book({ cab, handleclick }) {
       (pick === "malad" && drop === "rammandir") ||
       (pick === "rammandir" && drop === "malad")
     ) {
-      setKm(3.6 + 1.1);
+      setKm(4.7);
     } else if (
       (pick === "malad" && drop === "jogeshwari") ||
       (pick === "jogeshwari" && drop === "malad")
     ) {
-      setKm(4.7 + 1.4);
+      setKm(6.1);
     } else if (
       (pick === "malad" && drop === "andheri") ||
       (pick === "andheri" && drop === "malad")
     ) {
-      setKm(6.1 + 6.7);
+      setKm(12.8);
     } else if (
       (pick === "goregoan" && drop === "rammandir") ||
       (pick === "rammandir" && drop === "goregoan")
@@ -153,12 +153,12 @@ function Book({ cab, handleclick }) {
       (pick === "goregoan" && drop === "jogeshwari") ||
       (pick === "jogeshwari" && drop === "goregoan")
     ) {
-      setKm(1.1 + 1.4);
+      setKm(2.5);
     } else if (
       (pick === "goregoan" && drop === "andheri") ||
       (pick === "andheri" && drop === "goregoan")
     ) {
-      setKm(2.5 + 6.7);
+      setKm(9.2);
     } else if (
       (pick === "rammandir" && drop === "jogeshwari") ||
       (pick === "jogeshwari" && drop === "rammandir")
@@ -168,12 +168,47 @@ function Book({ cab, handleclick }) {
       (pick === "rammandir" && drop === "andheri") ||
       (pick === "andheri" && drop === "rammandir")
     ) {
-      setKm(1.4 + 6.7);
+      setKm(8.1);
     } else if (
       (pick === "jogeshwari" && drop === "andheri") ||
       (pick === "andheri" && drop === "jogeshwari")
     ) {
       setKm(6.7);
+    } else if (
+      (pick === "dahisar" && drop === "borivali") ||
+      (pick === "borivali" && drop === "dahisar")
+    ) {
+      setKm(2.5);
+    } else if (
+      (pick === "dahisar" && drop === "kandivali") ||
+      (pick === "kandivali" && drop === "dahisar")
+    ) {
+      setKm(5.9);
+    } else if (
+      (pick === "dahisar" && drop === "malad") ||
+      (pick === "malad" && drop === "dahisar")
+    ) {
+      setKm(8.2);
+    } else if (
+      (pick === "dahisar" && drop === "goregoan") ||
+      (pick === "goregoan" && drop === "dahisar")
+    ) {
+      setKm(11.8);
+    } else if (
+      (pick === "dahisar" && drop === "rammandir") ||
+      (pick === "rammandir" && drop === "dahisar")
+    ) {
+      setKm(12.9);
+    } else if (
+      (pick === "dahisar" && drop === "jogeshwari") ||
+      (pick === "jogeshwari" && drop === "dahisar")
+    ) {
+      setKm(14.3);
+    } else if (
+      (pick === "dahisar" && drop === "andheri") ||
+      (pick === "andheri" && drop === "dahisar")
+    ) {
+      setKm(21);
     }
   };
 
@@ -185,6 +220,7 @@ function Book({ cab, handleclick }) {
     setTotal(totalrs);
   };
   const locations = [
+    { title: "Dahisar", value: "dahisar" },
     { title: "Borivali", value: "borivali" },
     { title: "Kandivali", value: "kandivali" },
     { title: "Malad", value: "malad" },
@@ -193,7 +229,7 @@ function Book({ cab, handleclick }) {
     { title: "Jogeshwari", value: "jogeshwari" },
     { title: "Andheri", value: "andheri" },
   ];
-  const [pick, setPick] = useState("kandivali");
+  const [pick, setPick] = useState("dahisar");
   const [drop, setDrop] = useState("kandivali");
 
   const handlepickup = (e) => {
@@ -249,12 +285,15 @@ function Book({ cab, handleclick }) {
         toast.error("please sign in first");
         navigate("/signin");
       } else {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/validateUser`, {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: Token,
-          },
-        });
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/validateUser`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: Token,
+            },
+          }
+        );
         console.log(`response`, response);
         if (response) {
           if (response.status === 200) {
@@ -305,8 +344,20 @@ function Book({ cab, handleclick }) {
               </select>
             </div>
           </div>
-          <div className="text-white border-2 border-[#E63946] w-24 grid place-items-center h-10 rounded-md shadow-md shadow-[#E63946]">
-            <button onClick={Submit}>Submit</button>
+          <div className="flex gap-4">
+            <div className="text-white border-2 border-[#E63946] w-24 grid place-items-center h-10 rounded-md shadow-md shadow-[#E63946]">
+              <button
+                onClick={() => {
+                  setPick("dahisar");
+                  setDrop("kandivali");
+                }}
+              >
+                reset
+              </button>
+            </div>
+            <div className="text-white border-2 border-[#E63946] w-24 grid place-items-center h-10 rounded-md shadow-md shadow-[#E63946]">
+              <button onClick={Submit}>Submit</button>
+            </div>
           </div>
           <div className="w-[80%] text-white">
             <div className="grid grid-cols-2 grid-rows-5 border-2 border-[#E63946]  place-items-center">

@@ -2,6 +2,15 @@ import React from "react";
 import blogImg from "../images/blog1.jpg";
 
 function Blog() {
+
+  const Token = localStorage.getItem("user");
+  const User = JSON.parse(Token);
+  // console.log("Token======>>>",Token);
+  console.log("User======>>>",User);
+  console.log("User======>>>",User.fname);
+  console.log("User======>>>",User.lname);
+
+   
   return (
     <div className="bg-white">
       <div>
@@ -101,7 +110,7 @@ function Blog() {
                 the future!
               </p>
               <p>Let’s move!</p>
-              <p>Abhilash</p>
+              <p>{User.fname} {User.lname}</p>
             </div>
           </div>
         </div>

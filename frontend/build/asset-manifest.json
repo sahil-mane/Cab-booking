@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3242b44c.css",
+    "main.js": "/static/js/main.b0aea46a.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/blog1.jpg": "/static/media/blog1.95d70bd7e165d4a22f09.jpg",
+    "static/media/sideimg3.jpg": "/static/media/sideimg3.a4a3902ab28d9e167789.jpg",
+    "static/media/cardimg2.png": "/static/media/cardimg2.a852e3b6ee6e8d5e0d8f.png",
+    "static/media/about-2.jpg": "/static/media/about-2.e0656ba2535db0d03a08.jpg",
+    "static/media/about-3.jpg": "/static/media/about-3.ba4fa36b9a05a4bbd71d.jpg",
+    "static/media/Sideimg1.webp": "/static/media/Sideimg1.242a315f0c9cf78b6650.webp",
+    "static/media/about-4.jpg": "/static/media/about-4.366b584fce95938dbce6.jpg",
+    "static/media/sideimg4.jpg": "/static/media/sideimg4.4f96e5c1ede4e45e45f7.jpg",
+    "static/media/Contact.jpg": "/static/media/Contact.f48fb264870035cf72bc.jpg",
+    "static/media/cardimg1.jpg": "/static/media/cardimg1.a3159c2f9b3803a73435.jpg",
+    "static/media/cardimg3.webp": "/static/media/cardimg3.7f0f7351df24e3648518.webp",
+    "static/media/cardimg5.webp": "/static/media/cardimg5.8cc5bb39e1f7d75cc6fb.webp",
+    "static/media/about1.jpg": "/static/media/about1.522f7d42b87065626868.jpg",
+    "static/media/sideimg2.webp": "/static/media/sideimg2.9f6bab9f9f501fac7043.webp",
+    "static/media/faqimg.webp": "/static/media/faqimg.530961e463e28e9e5704.webp",
+    "static/media/about-1.jpg": "/static/media/about-1.1c2faf31c67b0408b5bc.jpg",
+    "static/media/about-5.jpg": "/static/media/about-5.9981d71d7260368fb101.jpg",
+    "static/media/cardimg7.webp": "/static/media/cardimg7.dcdcd6854697b6118881.webp",
+    "index.html": "/index.html",
+    "main.3242b44c.css.map": "/static/css/main.3242b44c.css.map",
+    "main.b0aea46a.js.map": "/static/js/main.b0aea46a.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3242b44c.css",
+    "static/js/main.b0aea46a.js"
+  ]
+}

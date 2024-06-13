@@ -210,6 +210,7 @@ function Book({ cab, handleclick }) {
     ) {
       setKm(21);
     }
+    
   };
 
   const Totalcalc = (e) => {
@@ -285,15 +286,12 @@ function Book({ cab, handleclick }) {
         toast.error("please sign in first");
         navigate("/signin");
       } else {
-        const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/validateUser`,
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: Token,
-            },
-          }
-        );
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/validateUser`, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: Token,
+          },
+        });
         console.log(`response`, response);
         if (response) {
           if (response.status === 200) {
@@ -344,20 +342,8 @@ function Book({ cab, handleclick }) {
               </select>
             </div>
           </div>
-          <div className="flex gap-4">
-            <div className="text-white border-2 border-[#E63946] w-24 grid place-items-center h-10 rounded-md shadow-md shadow-[#E63946]">
-              <button
-                onClick={() => {
-                  setPick("dahisar");
-                  setDrop("kandivali");
-                }}
-              >
-                reset
-              </button>
-            </div>
-            <div className="text-white border-2 border-[#E63946] w-24 grid place-items-center h-10 rounded-md shadow-md shadow-[#E63946]">
-              <button onClick={Submit}>Submit</button>
-            </div>
+          <div className="text-white border-2 border-[#E63946] w-24 grid place-items-center h-10 rounded-md shadow-md shadow-[#E63946]">
+            <button onClick={Submit}>Submit</button>
           </div>
           <div className="w-[80%] text-white">
             <div className="grid grid-cols-2 grid-rows-5 border-2 border-[#E63946]  place-items-center">
